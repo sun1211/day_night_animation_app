@@ -21,6 +21,33 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     super.initState();
+    Future.delayed(Duration(seconds: 1), () {
+      setState(() {
+        isFullSun = true;
+      });
+    });
+  }
+
+  void changeMood(int activeTabNum) {
+    if (activeTabNum == 0) {
+      setState(() {
+        isDayMood = true;
+      });
+      Future.delayed(Duration(milliseconds: 300), () {
+        setState(() {
+          isFullSun = true;
+        });
+      });
+    } else {
+      setState(() {
+        isFullSun = false;
+      });
+      Future.delayed(Duration(milliseconds: 300), () {
+        setState(() {
+          isDayMood = false;
+        });
+      });
+    }
   }
 
   @override
@@ -61,7 +88,7 @@ class _BodyState extends State<Body> {
                   VerticalSpacing(of: 50),
                   Tabs(
                     press: (value) {
-                      // changeMood(value);
+                      changeMood(value);
                     },
                   ),
                   VerticalSpacing(),
