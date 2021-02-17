@@ -31,3 +31,4 @@ flutter run -d chrome
 
 ## Screen Shot
 ![](https://raw.githubusercontent.com/sun1211/day_night_animation_app/master/screenShot/Screenshot_1613575787.png)
+![](https://raw.githubusercontent.com/sun1211/day_night_animation_app/master/screenShot/Screenshot_1613575885.png)
